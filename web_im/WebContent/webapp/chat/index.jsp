@@ -36,6 +36,43 @@
 				content:<input id="content" type = "text" value = "" /><input id="send" value="发送"  type="button"/>
 				<ul>
 					<li>申请好友（输入用户的IM账号）：<input id="sqhy_text" type="text" value="" /><input id="sqhy" type="button" value="申请好友" /> <li>
+					<li>
+						创建群：<br/>
+						群名称：<input id="cjq_name" type="text" value="" /><br/>
+						群描述：<input id="cjq_ms" type="text" value="" /><br/>
+						<div id = "cjq_member">
+						</div>
+						<input id="cjq" type="button" value="创建群" align="right" style="float: right;" /><br/>
+					</li>
+					
+					<li>
+						直接邀请入群：<br/>
+						群id：<input id="zjyqrq_id" type="text" value="" /><br/>
+						<div id = "zjyqrq_member">
+						</div>
+						<input id="zjyqrq" type="button" value="直接邀请入群" align="right" style="float: right;" /><br/>
+					</li>
+					<li>
+						间接邀请入群：(暂定)<br/>
+						群id：<input id="jjyqrq_id" type="text" value="" /><br/>
+						<div id = "jjyqrq_member">
+						</div>
+						<input id="jjyqrq" type="button" value="间接邀请入群" align="right" style="float: right;" /><br/>
+					</li>
+					<li>
+						退群：<br/>
+						群id：<input id="tq_id" type="text" value="" /><br/>
+						<input id="tq" type="button" value="退群" align="right" style="float: right;" />
+					</li>
+					<li>
+						获取群成员：<br/>
+						群id：<input id="hqqcy_id" type="text" value="" /><br/>
+						<div id = "hqqcy_member">
+						</div>
+						<input id="xhq" type="button" value="销毁群" align="right" style="float: right;" />
+						<input id="tcy" type="button" value="踢成员" align="right" style="float: right;" />
+						<input id="hqqcy" type="button" value="获取群成员" align="right" style="float: right;" /><br/>
+					</li>
 				</ul>				
 			</td>
 			<td>
