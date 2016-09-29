@@ -109,11 +109,14 @@ function init(){
 		
 	});
 	
+<<<<<<< HEAD
 	$("#sqq").unbind('click');//解除绑定
 	$("#sqq").click(function(){
 			imSDK.applyRoomInvite({"roomId":$("#sqq_id").val(),"reason":"求进"});
 		
 	});
+=======
+>>>>>>> branch 'master' of https://github.com/hzong/im-webim.git
 	
 	
 	$("#cjq").unbind('click');//解除绑定
@@ -250,6 +253,7 @@ function IMConnection(){
 				req_obj.roomId = obj.roomId;
 				req_obj.localpartJid = obj.fromJid;
 				if(confirm(obj.from+"邀请你进入"+obj.roomId+"群，描述："+obj.reason)){
+<<<<<<< HEAD
 					imSDK.acceptRoomInvite(req_obj);
 				}else{
 					req_obj.reason = "就不进";
@@ -325,6 +329,46 @@ function IMConnection(){
 				}else{
 					alert("用户:"+obj.from +"同意入群邀请进群");
 				}
+=======
+					
+					imSDK.agreeRoomInvite(obj);
+				}else{
+					req_obj.reason = "就不进";
+					imSDK.declineRoomInvite(req_obj);
+				}
+			},
+			onExitRoom:function(obj){
+				if(obj.localpart == account){
+					$("#grouplist span[groupid = '"+obj.roomId+"']").remove()
+					alert("退群成功");
+				}else{
+					alert(obj.localpart+"退出"+obj.roomId+"群");
+				}
+			},
+			onRoomMember:function(obj){
+				$.each(obj,function(i,member){
+					var str = "<input name = 'hqqcy_member_box'  type='checkbox' xm='"+member.localpart+"' value='"+member.localpartJid+"' />"+member.localpart+" <br/>";
+					$("#hqqcy_member").append(str);
+				});
+			},
+			onRemoveRoomMembers:function(obj){
+				if(obj.localpart == account){
+					$("#grouplist span[groupid = '"+obj.roomId+"']").remove();
+					alert("退群成功");
+				}else{
+					alert(obj.localpart+"退出"+obj.roomId+"群");
+				}
+			},
+			onRemoveRoomMembers:function(obj){
+				$("#grouplist span[groupid = '"+obj.roomId+"']").remove();
+					$.each(obj.members,function(i,item){
+						$("#hqqcy_member input[value="+item.localpartJid+"]").remove();
+					});
+			},
+			onDestroyRoom:function(obj){
+				$("#grouplist span[groupid = '"+obj.roomId+"']").remove();
+				alert("房间:"+obj.roomId+"解散了");
+>>>>>>> branch 'master' of https://github.com/hzong/im-webim.git
 			}
 			
 			
@@ -351,7 +395,11 @@ function IMConnection(){
 			onRemoveRoster:function(obj){//删除好友
 				$("#rosterlist span[jid = '"+obj.localpartJid+"']").remove()
 //				if(account == username ){
+<<<<<<< HEAD
 //					alert("好友已删除");
+=======
+					alert("好友已删除");
+>>>>>>> branch 'master' of https://github.com/hzong/im-webim.git
 //				}
 			},
 			onAgreeRoster:function(obj){//同意好友

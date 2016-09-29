@@ -73,11 +73,14 @@
 						<input id="tcy" type="button" value="踢成员" align="right" style="float: right;" />
 						<input id="hqqcy" type="button" value="获取群成员" align="right" style="float: right;" /><br/>
 					</li>
+<<<<<<< HEAD
 					<li>
 						申请入群：<br/>
 						群id：<input id="sqq_id" type="text" value="" /><br/>
 						<input id="sqq" type="button" value="申请" align="right" style="float: right;" /><br/>
 					</li>
+=======
+>>>>>>> branch 'master' of https://github.com/hzong/im-webim.git
 				</ul>				
 			</td>
 			<td>
